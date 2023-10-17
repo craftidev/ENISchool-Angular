@@ -1,4 +1,10 @@
-# Mytempapp
+# ENI Project Angular
+
+## Features
+
+- *On going*
+
+# ANGULAR spec
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.6.
 
