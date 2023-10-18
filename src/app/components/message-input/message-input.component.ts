@@ -5,15 +5,17 @@ import { Component, EventEmitter, Output } from '@angular/core';
     templateUrl: './message-input.component.html',
     styleUrls: ['./message-input.component.css'],
 })
-
 export class MessageInputComponent {
     @Output() messageSent = new EventEmitter<string>();
 
-    sendMessage(message: string): void {
+    sendMessage(inputElement: HTMLInputElement): void {
+        const message: string = inputElement.value;
+
         if (!message || message.trim().length === 0) {
             throw new Error('Message cannot be empty');
         }
 
         this.messageSent.emit(message);
+        inputElement.value = '';
     }
 }
