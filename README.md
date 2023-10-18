@@ -1,32 +1,42 @@
 # ENI Project ChatRoom Angular
 
-## Features
+## ChatRoom Application with Angular
 
-- *On going*
+### GUI prototype
+Use a simple ASCII design
 
-# ANGULAR spec
+```less
++--------------------------------------------------------+
+|  ChatRoom               | Handle: [        ] [Connect] |
++---------+----------------------------------------------+
+|         | @User1                                       ^
+|Users:   |  this is an exemple of message that takes    |
+| - User1 |  multiple lines.                             |
+| - User2 | ---                                          |
+| - User3 | @User3                                       |
+|         |  Response                                    |
+|         | ---                                          |
+|         | @User2                                       |
+|         |  Last message sent to the chatroom           v
++---------+----------------------------------------------+
+|  Message: [ --------- connect first --------- ] [Send] |
++--------------------------------------------------------+
+```
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.6.
+### Features
+- Simple handle identification (no auth for now).
+- List of users that spoke in the chat
+- Input for new message
+- List of message from vertical descending chronological order
+- Real time and persistant
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Exception Handling
+- No messages in the chatroom
+- Sending a message without a handle
 
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
 ## Further help
 
