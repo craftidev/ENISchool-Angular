@@ -1,1 +1,10 @@
-<p>message-list works!</p>
+<!-- message-list.component.html -->
+<div *ngIf="messages.length > 0; else noMessages">
+    <p *ngFor="let message of messages">
+        {{ message }}
+    </p>
+</div>
+
+<ng-template #noMessages>
+    <p>No messages yet.</p>
+</ng-template>

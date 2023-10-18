@@ -1,1 +1,4 @@
+<!-- app-component.html -->
 <h1>ChatRoom</h1>
+<app-message-list [messages]="messages"></app-message-list>
+<app-message-input (messageSent)="addMessage($event)"></app-message-input>

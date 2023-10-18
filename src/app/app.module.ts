@@ -2,10 +2,9 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { UserListComponent } from './components/user-list/user-list.component';
-import { MessageListComponent } from './components/message-list/message-list.component';
 import { MessageInputComponent } from './components/message-input/message-input.component';
-import { TestComponent } from './components/test/test.component';
+import { MessageListComponent } from './components/message-list/message-list.component';
+import { UserListComponent } from './components/user-list/user-list.component';
 
 @NgModule({
     declarations: [
@@ -13,12 +12,9 @@ import { TestComponent } from './components/test/test.component';
         UserListComponent,
         MessageListComponent,
         MessageInputComponent,
-        TestComponent
     ],
-    imports: [
-        BrowserModule
-    ],
+    imports: [BrowserModule],
     providers: [],
-    bootstrap: [AppComponent]
+    bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
