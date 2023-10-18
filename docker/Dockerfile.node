@@ -4,11 +4,15 @@ FROM node:18.18.2-bullseye-slim
 WORKDIR /home/node/app
 
 # Requirements/configurations
+RUN apt-get -y update
+RUN apt-get -y install git
 RUN npm install -g @angular/cli@16.2.6
 COPY package.json package-lock.json ./
 RUN npm ci
 COPY . .
 RUN chown -R node:node /home/node/app
+RUN mkdir /home/node/.vscode-server
+RUN chown -R node:node /home/node/.vscode-server
 USER node
 
 # Launch
